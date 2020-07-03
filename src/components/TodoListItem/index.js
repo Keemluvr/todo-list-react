@@ -4,14 +4,16 @@ import PropTypes from 'prop-types';
 import DoneTodo from '../DoneTodo'
 import DeleteTodo from '../DeleteTodo'
 
+import * as S from './style'
+
 const TodoListItem = ({ todo, index }) => {
 
   return (
-    <li>
+    <S.Li>
         <DoneTodo todoIndex={index}/>
         <p><strong>{todo.id}</strong> - {todo.title} - {todo.done ? 'true' : 'false'}</p>
         <DeleteTodo todoIndex={index}/>
-    </li>
+    </S.Li>
   );
 };
 

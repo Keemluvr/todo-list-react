@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 
 import { TodoContext } from "../../contexts/TodoContext";
 
-import './style.css'
+import * as S from './style'
 
 const AddTodo = () => {
   const { saveTodo } = useContext(TodoContext);
@@ -21,7 +21,7 @@ const AddTodo = () => {
   };
 
   return (
-    <form onSubmit={handleFormSubmit}>
+    <S.Form onSubmit={handleFormSubmit}>
       <input
         type="text"
         name="title"
@@ -30,7 +30,7 @@ const AddTodo = () => {
         onChange={handleInputChange}
       />
       <button>Add</button>
-    </form>
+    </S.Form>
   );
 };
 
