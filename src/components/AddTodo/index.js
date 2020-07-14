@@ -22,14 +22,14 @@ const AddTodo = () => {
 
   return (
     <S.Form onSubmit={handleFormSubmit}>
-      <input
+      <S.Input
         type="text"
         name="title"
         id="title"
         placeholder="new task..."
         onChange={handleInputChange}
       />
-      <button>Add</button>
+      <S.Button>Add</S.Button>
     </S.Form>
   );
 };
